@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hunger : MonoBehaviour
 {
 
-    public int hungerPoints = 10;
+    public int hungerPoints = 5;
 
     private int maxHungerPoints; 
     void Start()
