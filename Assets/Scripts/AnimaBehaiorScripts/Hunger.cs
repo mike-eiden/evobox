@@ -11,8 +11,8 @@ public class Hunger : MonoBehaviour
     void Start()
     {
         maxHungerPoints = hungerPoints; 
-        // Every 10 seconds there is a 1 in 10 chance to be hungry. 
-        InvokeRepeating(nameof(loseHungerPoint), 5f, 10f);
+        // Every 5 seconds there is a 1 in 10 chance to be hungry. 
+        InvokeRepeating(nameof(loseHungerPoint), 1f, 5f);
     }
 
     // 1 in 10 chance to lose a hunger point.  This function should be called on delay

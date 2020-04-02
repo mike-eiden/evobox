@@ -14,7 +14,7 @@ public class AnimalBehavior : MonoBehaviour
     // the maximum distance this animal can roam from its spawn point
     private float roamDistance;
 
-    void Start()
+    protected void Start()
     {
         maxSpeed = 1f;
         spawnPosition = animalBody.position;

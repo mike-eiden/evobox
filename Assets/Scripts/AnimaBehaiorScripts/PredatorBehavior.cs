@@ -15,12 +15,12 @@ public class PredatorBehavior : AnimalBehavior
 
     private void Start()
     {
+        base.Start();
         hunger = GetComponent<Hunger>(); 
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(hunger.hungerPoints);
         Roam();
         Hunt();
     }
