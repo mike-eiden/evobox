@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1984461162901537693}
   - component: {fileID: 8986768967006709593}
   - component: {fileID: 3350056771757829002}
+  - component: {fileID: 5672966295938036504}
   m_Layer: 0
   m_Name: RedBerryBush
   m_TagString: Untagged
@@ -204,6 +205,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5672966295938036504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984461162903518485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f2190e0beecd14380a90d3eecd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  berriesChild: {fileID: 3828902402063306016}
 --- !u!1 &2077492093821616452
 GameObject:
   m_ObjectHideFlags: 0
