@@ -91,9 +91,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2798959536760514417}
-  - component: {fileID: 2403630294440543330}
   - component: {fileID: 6577764329405686998}
   - component: {fileID: 1322397683690508038}
+  - component: {fileID: 4826327999217599810}
+  - component: {fileID: 2044152782717492764}
   m_Layer: 0
   m_Name: DeerPrefab
   m_TagString: Deer
@@ -116,20 +117,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2403630294440543330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192538035696932194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17acc00112cd430408979ef66d48e706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalBody: {fileID: 2798959536760514417}
-  maxSpeed: 0
 --- !u!65 &6577764329405686998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,3 +146,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4826327999217599810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192538035696932194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1c73ba1801490f8c205c6bf55b45fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalBody: {fileID: 2798959536760514417}
+  maxSpeed: 0
+  foodList:
+  - RedBerryBush
+  huntRadius: 3
+  huntSpeed: 2
+--- !u!114 &2044152782717492764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192538035696932194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ceee9dfbfa97449829b5fa4de7a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerPoints: 5
