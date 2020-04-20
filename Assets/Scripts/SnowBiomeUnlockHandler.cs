@@ -31,9 +31,9 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
     {
         if (!snowUnlocked)
         {
-            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 5
-                && GameObject.FindGameObjectsWithTag("Deer").Length >= 5
-                && GameObject.FindGameObjectsWithTag("Bear").Length >= 3
+            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 1
+                && GameObject.FindGameObjectsWithTag("Deer").Length >= 1
+                && GameObject.FindGameObjectsWithTag("Bear").Length >= 1
                 && currentBiome == 1)
             {
                 info_snow.SetActive(false);
@@ -47,7 +47,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         }
         if (!mountainUnlocked)
         {
-            if (GameObject.FindGameObjectsWithTag("Bear").Length >= 10 
+            if (GameObject.FindGameObjectsWithTag("Bear").Length >= 1
                 && currentBiome == 2)
             {
                 info_mountain.SetActive(false);
@@ -85,6 +85,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mountainBiomeArrow.SetActive(false);
         Camera.main.transform.position = mainCameraPos.position;
         Camera.main.transform.rotation = mainCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(mainCameraPos.position);
     }
 
     public void onSnowBiomeArrowClick_FromMain()
@@ -98,7 +99,8 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mainBiomeArrow.SetActive(true);
         // TODO make this lerp nicely
         Camera.main.transform.position = snowCameraPos.position;
-        Camera.main.transform.rotation = snowCameraPos.rotation; 
+        Camera.main.transform.rotation = snowCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(snowCameraPos.position);
     }
 
     public void onSnowBiomeArrowClick_fromMountain()
@@ -110,6 +112,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         // TODO make this lerp nicely
         Camera.main.transform.position = snowCameraPos.position;
         Camera.main.transform.rotation = snowCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(snowCameraPos.position);
     }
 
 
@@ -122,5 +125,6 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         mountainBiomeArrow.SetActive(false);
         Camera.main.transform.position = mountainCameraPos.position;
         Camera.main.transform.rotation = mountainCameraPos.rotation;
+        Camera.main.GetComponent<CameraZoom>().UpdateCameraStartPosition(mountainCameraPos.position);
     }
 }
