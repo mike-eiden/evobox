@@ -31,9 +31,9 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
     {
         if (!snowUnlocked)
         {
-            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 1
-                && GameObject.FindGameObjectsWithTag("Deer").Length >= 1
-                && GameObject.FindGameObjectsWithTag("Bear").Length >= 1
+            if (GameObject.FindGameObjectsWithTag("Wolf").Length >= 5
+                && GameObject.FindGameObjectsWithTag("Deer").Length >= 5
+                && GameObject.FindGameObjectsWithTag("Bear").Length >= 3
                 && currentBiome == 1)
             {
                 info_snow.SetActive(false);
@@ -47,7 +47,7 @@ public class SnowBiomeUnlockHandler : MonoBehaviour
         }
         if (!mountainUnlocked)
         {
-            if (GameObject.FindGameObjectsWithTag("Bear").Length >= 1
+            if (GameObject.FindGameObjectsWithTag("Bear").Length >= 10
                 && currentBiome == 2)
             {
                 info_mountain.SetActive(false);
